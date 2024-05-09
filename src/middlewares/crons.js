@@ -1,8 +1,8 @@
 export default class Crons {
 
-    async update(){
+    async getAllPing(){
         try {
-            console.log('tarefa executada 22:20')
+            console.log('tarefa executada')
         } catch (e) {
             
         }

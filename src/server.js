@@ -7,7 +7,7 @@ import config from './config/default.js'
 import { app } from './app.js';
 
 log.setup({
-    prefix: '(So Delivery API)',
+    prefix: '(Bonfire Status API)',
 });
 
 

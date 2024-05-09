@@ -12,7 +12,8 @@ const PingSchema = new mongoose.Schema({
 		type: String
 	},
 	emails:{
-		type: Array
+		type: Array,
+		default: []
 	},
 	historic:[
 		{

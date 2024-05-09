@@ -3,8 +3,6 @@ dotenv.config();
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import multer from 'multer';
-import chalk from 'chalk';
 import log from 'gulog';
 import cors from 'cors';
 
@@ -20,6 +18,8 @@ const { sendError } = new Errors();
 export { sendError, handleRequest };
 export const app = express();
 connectDB();
+
+const crons = new Crons();
 
 if (config.logRequestInformations) app.use(morgan('dev'));
 
@@ -42,3 +42,7 @@ app.listen(config.port, () => {
   
 });
 
+
+setInterval(() => {
+  cro
+}, 60000)

@@ -1,17 +1,15 @@
 import { Router } from "express";
 
-import addressRouter from "./resources/address.router.js";
-import partyRouter from "./resources/party.router.js";
-import storeRouter from "./resources/store.router.js";
-import usersRouter from "./resources/users.router.js";
+import PingController from "../resources/ping/ping.controllers.js";
 
+const pingController = new PingController();
 export const router = Router();
 
 router.get("/ping", (req, res) => {
   res.sendStatus(200);
 });
 
-router.use('/address', addressRouter);
-router.use('/store', storeRouter);
-router.use('/party', storeRouter);
-router.use('/user', usersRouter);
+router.delete('/ping/delete', pingController.deletePing);
+router.post('/ping/create', pingController.createPing);
+router.get('/ping/get', pingController.getHistoric);
+router.post('/ping/post', pingController.post);
