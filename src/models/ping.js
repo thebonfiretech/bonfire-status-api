@@ -19,12 +19,16 @@ const PingSchema = new mongoose.Schema({
 		{
 			date: {
 				type: Date,
+				default: Date.now()
 			},
 			status:{
 				type: String
 			},
 			responseTime: {
 				type: Number
+			},
+			isSuccess: {
+				type: Boolean
 			}
 		}
 	]

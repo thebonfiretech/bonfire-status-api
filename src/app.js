@@ -44,5 +44,5 @@ app.listen(config.port, () => {
 
 
 setInterval(() => {
-  cro
-}, 60000)
+  crons.getAllPing();
+}, 60000*5)
